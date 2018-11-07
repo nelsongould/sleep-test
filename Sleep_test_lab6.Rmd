@@ -1,0 +1,34 @@
+---
+title: "sleep_lab_6"
+author: "Nelson Gould"
+date: "11/6/2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r}
+
+library(tidyverse)
+
+sleep <- read_csv("sleep.csv")
+
+
+```
+
+
+
+Creating exploritory graphs
+
+
+```{r}
+
+graph_sleep <- ggplot(sleep, aes(x= gestation, y = body)) +
+  geom_point()
+
+graph_sleep
+```
+
